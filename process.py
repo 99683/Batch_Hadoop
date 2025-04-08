@@ -54,7 +54,6 @@ col_count = len(clean_df.columns)
 #avg_age = clean_df.agg({"age": "avg"}).collect()[0][0]
 
 print(f"Shape of the data: ({row_count}, {col_count})")
-#print(f"Average age: {avg_age:.2f}")
 numeric_cols = ["age", "avg_glucose_level", "bmi"]
 stats = clean_df.agg(
     avg("age").alias("avg_age"),
