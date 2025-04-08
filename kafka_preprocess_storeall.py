@@ -43,7 +43,6 @@ raw_df = kafka_df.selectExpr("CAST(value AS STRING)") \
 # 1. Gérer BMI ("N/A" -> None, cast en double)
 preprocessed_df = raw_df.withColumn("bmi", when(col("bmi") == "N/A", None).otherwise(col("bmi").cast("double")))
 
-#last update 1 to handle null values !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 preprocessed_df = preprocessed_df.withColumn("smoking_status", when(col("smoking_status").isNull(), "unknown").otherwise(col("smoking_status")))
 # Drop rows with NULLs in numeric columns used by VectorAssembler
 num_cols = ["age", "avg_glucose_level", "bmi"]
