@@ -20,11 +20,6 @@ clean_df = clean_df.withColumn("weight", when(col("stroke") == 0, weight_0).othe
 # Train/test split
 train_df, _ = clean_df.randomSplit([0.8, 0.2], seed=42)
 
-#Crossvalidator
-
-#paramGrid = ParamGridBuilder().addGrid(rf.numTrees, [100, 200]).addGrid(rf.maxDepth, [5, 10]).build()
-#cv = CrossValidator(estimator=rf, estimatorParamMaps=paramGrid, evaluator=BinaryClassificationEvaluator(labelCol="stroke"), numFolds=3)
-
 # Define and train Random Forest model
 rf = RandomForestClassifier(featuresCol="features", labelCol="stroke", weightCol="weight", 
                                     numTrees=100, seed=42)
