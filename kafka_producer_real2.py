@@ -11,7 +11,7 @@ dataset_path = "hdfs:///data/pandemic/stroke.csv"
 df = spark.read.csv(dataset_path, header=True, inferSchema=True)
 
 # Convertir en liste de dictionnaires pour Kafka
-raw_data = df.collect()  # Récupère toutes les lignes en mémoire
+raw_data = df.collect() 
 
 # Initialiser le producteur Kafka
 producer = KafkaProducer(bootstrap_servers='localhost:9092',
