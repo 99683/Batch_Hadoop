@@ -75,7 +75,6 @@ streamlit run /root/batch/streamlit_app3.py --server.address 0.0.0.0 --server.po
 access :
 http://localhost:16010
 
-
 Batch_Hadoop/
 ├── process.py              # Data preprocessing script
 ├── Rf_model.py             # Model training script
@@ -85,5 +84,4 @@ Batch_Hadoop/
 ├── streamlit_app3.py       # Streamlit dashboard
 ├── stroke.csv             # Sample dataset
 └── README.md              # This file
-
 
