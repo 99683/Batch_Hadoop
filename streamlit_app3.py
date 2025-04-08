@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 DB_PARAMS = {
     "dbname": "stroke_predictionall",
     "user": "postgres",
-    "password": "password",  # Remplacez par votre mot de passe réel
+    "password": "password",  # Remplacez par votre mot de passe réel de postgres
     "host": "localhost",
     "port": "5432"
 }
