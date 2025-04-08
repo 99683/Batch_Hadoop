@@ -15,7 +15,7 @@ kafka_df = spark.readStream \
 
 # Fonction pour afficher le message
 def process_batch(batch_df, batch_id):
-    if batch_df.count() > 0:  # Vérifie qu'il y a des données
+    if batch_df.count() > 0:  
         print(f"Batch {batch_id} - Données bien lues avec succès : {batch_df.count()} lignes")
 
 # Lancer le streaming
