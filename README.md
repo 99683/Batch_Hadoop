@@ -58,7 +58,7 @@ spark-submit Rf_model.py
 # 3. Evaluate model
 spark-submit Rf_evaluating.py
 
-#4Start Real-Time Prediction
+# 4. Start Real-Time Prediction
 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 --jars /root/batch/postgresql-42.7.3.jar kafka_predict_storeall.py
 
 # Start Kafka producer (in another terminal)
